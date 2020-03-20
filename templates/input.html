@@ -25,6 +25,8 @@
        
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
+     {{ prediction_text }}
+     
     <h3>Predict For Range</h3>
     <form action="{{ url_for('predict_range')}}"method="post">
     	<input type="text" name="experience2" id="my_date_picker1" placeholder="Date To Predict" required="required"  autocomplete="off" />
@@ -73,7 +75,7 @@
     </script> 
    <br>
    <br>
-   {{ prediction_text }}
+  
 
  </div>
 
