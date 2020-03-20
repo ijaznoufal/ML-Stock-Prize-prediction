@@ -52,16 +52,14 @@ def predict_range():
     For rendering results on HTML GUI
     '''
     int_features = [str(x) for x in request.form.values()]
-    
-   
-    
-    input_date = int_features[1]
+     
+    input_date = int_features[0]
     
     PredictForRange_obj = PredictForRange()
     
     PredictForRange_obj.Predict_stock_for_range(input_date)
   
-    return render_template('input.html', prediction_text='Date :{0} Stock Prize: {1}'.format(int_features[0],int_features[1]))
+    return render_template('input.html')
    
 
 if __name__ == "__main__":
